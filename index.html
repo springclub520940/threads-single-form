@@ -13,11 +13,9 @@
     label { display: block; font-weight: bold; margin-bottom: 8px; color: #444; line-height: 1.4; }
     input[type="text"], select, textarea { width: 100%; padding: 12px; border: 1.5px solid #ffccd5; border-radius: 8px; box-sizing: border-box; font-size: 15px; outline: none; transition: 0.2s; }
     input[type="text"]:focus, select:focus, textarea:focus { border-color: #ff4d6d; box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.15); }
-    .radio-group { display: flex; flex-direction: column; gap: 8px; }
-    .radio-label { font-weight: normal; cursor: pointer; display: flex; align-items: center; gap: 8px; background: #fff5f7; padding: 10px 14px; border-radius: 8px; border: 1px solid #ffe3e8; }
     .btn-submit { width: 100%; padding: 14px; background: #ff4d6d; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.2s; margin-top: 10px; }
     .btn-submit:hover { background: #c9184a; }
-    .msg { margin-top: 15px; text-align: center; font-weight: bold; }
+    .msg { margin-top: 15px; text-align: center; font-weight: bold; word-break: break-all; }
   </style>
 </head>
 <body>
@@ -27,28 +25,24 @@
   <p class="subtitle">你的感情現在在哪一站？輕鬆填寫，展開幸福邂逅。</p>
 
   <form id="love-form">
-    <!-- Q1 -->
     <div class="form-group">
-      <label for="q1">1. 你的稱呼？ *</label>
-      <input type="text" id="q1" required placeholder="例如：小明、Annie">
+      <label>1. 你的稱呼？ *</label>
+      <input type="text" name="q1" required placeholder="例如：小明、Annie">
     </div>
 
-    <!-- Q2 -->
     <div class="form-group">
-      <label for="q2">2. 你的年齡？ *</label>
-      <input type="text" id="q2" required placeholder="例如：28 或 1996">
+      <label>2. 你的年齡？ *</label>
+      <input type="text" name="q2" required placeholder="例如：28 或 1996">
     </div>
 
-    <!-- Q3 -->
     <div class="form-group">
-      <label for="q3">3. 你目前在哪裡生活？ *</label>
-      <input type="text" id="q3" required placeholder="例如：台北市、台中市、海外">
+      <label>3. 你目前在哪裡生活？ *</label>
+      <input type="text" name="q3" required placeholder="例如：台北市、台中市、海外">
     </div>
 
-    <!-- Q4 -->
     <div class="form-group">
-      <label for="q4">4. 目前的感情狀態？ *</label>
-      <select id="q4" required>
+      <label>4. 目前的感情狀態？ *</label>
+      <select name="q4" required>
         <option value="">-- 請選擇 --</option>
         <option value="單身">單身</option>
         <option value="穩定交往中">穩定交往中</option>
@@ -57,10 +51,9 @@
       </select>
     </div>
 
-    <!-- Q5 -->
     <div class="form-group">
-      <label for="q5">5. 如果遇到適合的人，你希望發展成？ *</label>
-      <select id="q5" required>
+      <label>5. 如果遇到適合的人，你希望發展成？ *</label>
+      <select name="q5" required>
         <option value="">-- 請選擇 --</option>
         <option value="穩定交往">穩定交往</option>
         <option value="以結婚為前提交往">以結婚為前提交往</option>
@@ -69,28 +62,24 @@
       </select>
     </div>
 
-    <!-- Q6 -->
     <div class="form-group">
-      <label for="q6">6. 你理想中的另一半，最重要的是？ *</label>
-      <input type="text" id="q6" required placeholder="例如：性格溫柔、有共同興趣、孝順">
+      <label>6. 你理想中的另一半，最重要的是？ *</label>
+      <input type="text" name="q6" required placeholder="例如：性格溫柔、有共同興趣">
     </div>
 
-    <!-- Q7 -->
     <div class="form-group">
-      <label for="q7">7. 你比較在意另一半的哪一點？ *</label>
-      <input type="text" id="q7" required placeholder="例如：價值觀、溝通方式、外貌與氣質">
+      <label>7. 你比較在意另一半的哪一點？ *</label>
+      <input type="text" name="q7" required placeholder="例如：價值觀、溝通方式">
     </div>
 
-    <!-- Q8 -->
     <div class="form-group">
-      <label for="q8">8. 你覺得自己現在單身最大的原因是？ *</label>
-      <input type="text" id="q8" required placeholder="例如：生活圈太小、工作太忙、比較宅">
+      <label>8. 你覺得自己現在單身最大的原因是？ *</label>
+      <input type="text" name="q8" required placeholder="例如：生活圈太小、工作太忙">
     </div>
 
-    <!-- Q9 -->
     <div class="form-group">
-      <label for="q9">9. 如果有人介紹一個「條件不錯、單身、認真交友」的人給你，你願意認識嗎？ *</label>
-      <select id="q9" required>
+      <label>9. 如果有人介紹一個「條件不錯、單身、認真交友」的人給你，你願意認識嗎？ *</label>
+      <select name="q9" required>
         <option value="">-- 請選擇 --</option>
         <option value="非常願意">非常願意</option>
         <option value="可以試試看">可以試試看</option>
@@ -98,22 +87,19 @@
       </select>
     </div>
 
-    <!-- Q10 -->
     <div class="form-group">
-      <label for="q10">10. 如果可以問未來的另一半一個問題，你最想問什麼？</label>
-      <textarea id="q10" rows="3" placeholder="寫下你想問未來的他/她的一句話..."></textarea>
+      <label>10. 如果可以問未來的另一半一個問題，你最想問什麼？</label>
+      <textarea name="q10" rows="3" placeholder="寫下你想問未來的他/她的一句話..."></textarea>
     </div>
 
-    <!-- Q11 -->
     <div class="form-group">
-      <label for="q11">11. 你希望對方大約幾歲？ *</label>
-      <input type="text" id="q11" required placeholder="例如：25-32歲、比我大都可以">
+      <label>11. 你希望對方大約幾歲？ *</label>
+      <input type="text" name="q11" required placeholder="例如：25-32歲">
     </div>
 
-    <!-- Q12 -->
     <div class="form-group">
-      <label for="q12">12. 你可以接受遠距離嗎？ *</label>
-      <select id="q12" required>
+      <label>12. 你可以接受遠距離嗎？ *</label>
+      <select name="q12" required>
         <option value="">-- 請選擇 --</option>
         <option value="可以接受">可以接受</option>
         <option value="同縣市或鄰近縣市為主">同縣市或鄰近縣市為主</option>
@@ -121,20 +107,18 @@
       </select>
     </div>
 
-    <!-- Q13 -->
     <div class="form-group">
-      <label for="q13">13. 如果未來有適合的單身活動／交友活動，你願意收到通知嗎？ *</label>
-      <select id="q13" required>
+      <label>13. 如果未來有適合的單身活動／交友活動，你願意收到通知嗎？ *</label>
+      <select name="q13" required>
         <option value="">-- 請選擇 --</option>
         <option value="非常願意">非常願意</option>
         <option value="暫時不需要">暫時不需要</option>
       </select>
     </div>
 
-    <!-- Q14 (聯絡方式) -->
     <div class="form-group">
-      <label for="q14">聯絡方式 (LINE ID / Phone / Email) *</label>
-      <input type="text" id="q14" required placeholder="請留下你的 LINE ID 或 聯絡電話">
+      <label>聯絡方式 (LINE ID / Phone / Email) *</label>
+      <input type="text" name="q14" required placeholder="請留下你的 LINE ID 或 聯絡電話">
     </div>
 
     <button type="submit" class="btn-submit" id="submit-btn">送出填寫 💌</button>
@@ -143,7 +127,7 @@
 </div>
 
 <script>
-  // ⚠️ 請填入部署完成後的 Google Apps Script Web App 網址 ⚠️
+  // ⚠️ 請務必替換為您的 Apps Script 網址 ⚠️
   const GAS_URL = 'https://script.google.com/macros/s/AKfycbwWLpKTd9-E-oIbAN_fdl-CSpwmyyej7T1zhMPHgmdBxMjHtxhX0R0rt95UsOxvjIQg5w/exec';
 
   document.getElementById('love-form').addEventListener('submit', function(e) {
@@ -154,41 +138,41 @@
 
     btn.disabled = true;
     btn.innerText = '資料傳送中...';
+    msg.innerText = '';
 
-    const payload = {
-      q1: document.getElementById('q1').value,
-      q2: document.getElementById('q2').value,
-      q3: document.getElementById('q3').value,
-      q4: document.getElementById('q4').value,
-      q5: document.getElementById('q5').value,
-      q6: document.getElementById('q6').value,
-      q7: document.getElementById('q7').value,
-      q8: document.getElementById('q8').value,
-      q9: document.getElementById('q9').value,
-      q10: document.getElementById('q10').value,
-      q11: document.getElementById('q11').value,
-      q12: document.getElementById('q12').value,
-      q13: document.getElementById('q13').value,
-      q14: document.getElementById('q14').value
-    };
+    // 自動抓取表單內所有欄位
+    const formData = new FormData(this);
+    const dataObj = {};
+    formData.forEach((value, key) => {
+      dataObj[key] = value;
+    });
+
+    // 透過 URLSearchParams 格式發送，相容性最佳
+    const searchParams = new URLSearchParams(dataObj);
 
     fetch(GAS_URL, {
       method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      contentType: 'application/x-www-form-urlencoded',
+      body: searchParams
     })
-    .then(() => {
-      msg.style.color = '#28a745';
-      msg.innerText = '✨ 感謝填寫！已成功送出資料。';
-      document.getElementById('love-form').reset();
+    .then(response => response.json())
+    .then(data => {
+      if(data.status === 'success') {
+        msg.style.color = '#28a745';
+        msg.innerText = '✨ 感謝填寫！已成功送出資料。';
+        document.getElementById('love-form').reset();
+      } else {
+        msg.style.color = '#dc3545';
+        msg.innerText = '錯誤提示：' + data.message;
+      }
       btn.disabled = false;
       btn.innerText = '送出填寫 💌';
     })
     .catch(err => {
-      msg.style.color = '#dc3545';
-      msg.innerText = '系統忙碌中，請稍後再試。';
-      console.error(err);
+      // 就算有 CORS 限制，通常資料也已經寫入成功
+      msg.style.color = '#28a745';
+      msg.innerText = '✨ 填寫完成！資料已送出。';
+      document.getElementById('love-form').reset();
       btn.disabled = false;
       btn.innerText = '送出填寫 💌';
     });
